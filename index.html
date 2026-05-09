@@ -144,6 +144,60 @@ content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và
   width: 100%;
   display: block;
 }
+  /* Feedback */
+
+.feedback-section {
+  text-align: center;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.feedback-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
     footer {
       background: #2c5364;
       color: white;
@@ -253,34 +307,34 @@ footer i {
 </section>
 
 <section class="feedback-section">
-  <h2>Trải nghiệm của khách hàng:</h2>
+  <h2>Trải nghiệm của khách hàng</h2>
 
   <div class="feedback-grid">
 
     <div class="feedback-card">
-      <img src="feedback1.jpg" alt="Feedback khách hàng">
+      <img src="feedback1.jpg" alt="Feedback 1" onclick="openPopup(this.src)">
     </div>
 
     <div class="feedback-card">
-      <img src="feedback2.jpg" alt="Feedback khách hàng">
+      <img src="feedback2.jpg" alt="Feedback 2" onclick="openPopup(this.src)">
     </div>
 
     <div class="feedback-card">
-      <img src="feedback3.jpg" alt="Feedback khách hàng">
+      <img src="feedback3.jpg" alt="Feedback 3" onclick="openPopup(this.src)">
     </div>
 
     <div class="feedback-card">
-      <img src="feedback4.jpg" alt="Feedback khách hàng">
+      <img src="feedback4.jpg" alt="Feedback 4" onclick="openPopup(this.src)">
     </div>
 
   </div>
 </section>
 
-<section style="text-align:center;">
-  <h2>Sẵn sàng trải nghiệm?</h2>
-  <a href="tel:0368309653" class="btn">Liên hệ đặt lịch ngay</a>
-</section>
+<!-- Popup ảnh -->
 
+<div id="popup" class="popup" onclick="closePopup()">
+  <img id="popup-img">
+</div>
 
 <div class="contact-fixed">
   <a href="https://zalo.me/0399965500" target="_blank" class="zalo">
@@ -320,5 +374,15 @@ footer i {
 
   <p>© 2026 Flexcare Therapy | All rights reserved</p>
 </footer>
+  <script>
+function openPopup(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = src;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
 </body>
 </html>
