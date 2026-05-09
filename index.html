@@ -21,7 +21,7 @@ content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và
     }
 
     body {
-      background: #f4f9f9;
+      background: #ffffff;
       color: #333;
     }
 
@@ -79,7 +79,7 @@ content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và
       background: white;
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       text-align: center;
       transition: 0.3s;
     }
@@ -115,6 +115,35 @@ content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và
       font-style: italic;
     }
 
+    /* Feedback KH*/
+
+.feedback-section {
+  text-align: center;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feedback-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-card img {
+  width: 100%;
+  display: block;
+}
     footer {
       background: #2c5364;
       color: white;
