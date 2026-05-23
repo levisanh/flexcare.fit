@@ -14,3 +14,20 @@
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
+    const fades = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", ()=>{
+
+  fades.forEach(fade => {
+
+    const top = fade.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+
+      fade.classList.add("show");
+
+    }
+
+  });
+
+});
