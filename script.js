@@ -31,3 +31,47 @@ window.addEventListener("scroll", ()=>{
   });
 
 });
+
+  const scriptURL =
+"https://script.google.com/macros/s/AKfycby5uGth9hOqeIu1ajFYaj5PW9fZgLYzaadJfNRK51N7ESH8MwGoC8LPyJ_umwOcOQU/exec";
+
+document
+.getElementById("booking-form")
+.addEventListener("submit", async (e)=>{
+
+  e.preventDefault();
+
+  const data = {
+
+    name:
+    document.getElementById("name").value,
+
+    phone:
+    document.getElementById("phone").value,
+
+    date:
+    document.getElementById("date").value,
+
+    service:
+    document.getElementById("service").value,
+
+    time:
+    document.getElementById("time").value
+
+  };
+
+  await fetch(scriptURL,{
+
+    method:"POST",
+
+    body:JSON.stringify(data)
+
+  });
+
+  alert("Đặt lịch thành công 😄");
+
+  document
+  .getElementById("booking-form")
+  .reset();
+
+});
