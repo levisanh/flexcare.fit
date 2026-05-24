@@ -33,7 +33,7 @@ window.addEventListener("scroll", ()=>{
 });
 
   const scriptURL =
-"https://script.google.com/macros/s/AKfycbyZJA2cUBeGop0wy1pgu0nJhlK5AtNpFRk6wkkP0rVVbZHwaKlDgijQxkhpKF-QoWo/exec";
+"https://script.google.com/macros/s/AKfycby5uGth9hOqeIu1ajFYaj5PW9fZgLYzaadJfNRK51N7ESH8MwGoC8LPyJ_umwOc0QU/exec";
 
 document
 .getElementById("booking-form")
@@ -62,17 +62,18 @@ document
 
   await fetch(scriptURL, {
 
-  method: "POST",
+    method: "POST",
 
-  headers: {
-    "Content-Type": "application/json"
-  },
+    headers: {
+      "Content-Type": "application/json"
+    },
 
-  body: JSON.stringify(data)
+    body: JSON.stringify(data)
 
-});
+  });
 
-alert("Đặt lịch thành công 😄");
+  alert("Đặt lịch thành công 😄");
+
   document
   .getElementById("booking-form")
   .reset();
