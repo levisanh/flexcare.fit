@@ -60,16 +60,19 @@ document
 
   };
 
-  await fetch(scriptURL,{
+  await fetch(scriptURL, {
 
-    method:"POST",
+  method: "POST",
 
-    body:JSON.stringify(data)
+  headers: {
+    "Content-Type": "application/json"
+  },
 
-  });
+  body: JSON.stringify(data)
 
-  alert("Đặt lịch thành công 😄");
+});
 
+alert("Đặt lịch thành công 😄");
   document
   .getElementById("booking-form")
   .reset();
