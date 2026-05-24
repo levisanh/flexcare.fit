@@ -33,7 +33,7 @@ window.addEventListener("scroll", ()=>{
 });
 
   const scriptURL =
-"https://script.google.com/macros/s/AKfycby5uGth9hOqeIu1ajFYaj5PW9fZgLYzaadJfNRK51N7ESH8MwGoC8LPyJ_umwOc0QU/exec";
+"https://script.google.com/macros/s/AKfycbyZJA2cUBeGop0wy1pgu0nJhlK5AtNpFRk6wkkP0rVVbZHwaKlDgijQxkhpKF-QoWo/exec";
 
 document
 .getElementById("booking-form")
