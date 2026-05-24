@@ -248,3 +248,67 @@
      opacity:1;
     transform:translateY(0);
     }
+    .booking{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.booking h2{
+  font-size:48px;
+  margin-bottom:40px;
+  color:#1f4b63;
+}
+
+.booking form{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.booking input,
+.booking select{
+
+  padding:14px 18px;
+
+  border:none;
+
+  border-radius:12px;
+
+  font-size:16px;
+
+  min-width:180px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.booking button{
+
+  padding:14px 28px;
+
+  border:none;
+
+  border-radius:30px;
+
+  background:#00c9a7;
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.booking button:hover{
+
+  transform:translateY(-3px);
+
+  opacity:0.9;
+
+}
