@@ -32,7 +32,7 @@ window.addEventListener("scroll", ()=>{
 
 });
 
-  const scriptURL =
+  
 "const scriptURL =
 "https://script.google.com/macros/s/AKfycbyZJA2cUBeGop0wy1pgu0nJhlK5AtNpFRk6wkkP0rVVbZHwaKlDgijQxkhpKF-QoWo/exec";
 
