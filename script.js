@@ -37,7 +37,7 @@ const scriptURL =
 
 document
 .getElementById("booking-form")
-.addEventListener("submit", async (e)=>{
+.addEventListener("submit", async (e) => {
 
   e.preventDefault();
 
@@ -64,6 +64,7 @@ document
 
     method: "POST",
     mode: "no-cors",
+
     headers: {
       "Content-Type": "application/json"
     },
