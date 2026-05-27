@@ -67,3 +67,21 @@ document.getElementById('booking-form').addEventListener('submit', async (e) => 
   alert('Đặt lịch thành công 😄');
   document.getElementById('booking-form').reset();
 });
+
+// Manage external placeholder for date input
+(function () {
+  const dateInput = document.getElementById('date');
+  if (!dateInput) return;
+  const dateField = dateInput.closest('.date-field');
+
+  function update() {
+    if (!dateField) return;
+    if (dateInput.value) dateField.classList.add('has-value');
+    else dateField.classList.remove('has-value');
+  }
+
+  dateInput.addEventListener('input', update);
+  dateInput.addEventListener('change', update);
+  // init
+  update();
+})();

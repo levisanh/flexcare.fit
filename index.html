@@ -41,7 +41,10 @@
       <form id="booking-form">
         <input type="text" id="name" placeholder="Họ tên" required />
         <input type="tel" id="phone" placeholder="Số điện thoại" required />
-        <input type="date" id="date" required />
+        <div class="date-field">
+          <span class="date-placeholder">Chọn ngày</span>
+          <input type="date" id="date" required />
+        </div>
         <select id="time" required>
           <option value="" disabled selected>Chọn khung giờ</option>
           <option>07:00</option>
