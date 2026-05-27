@@ -5,51 +5,76 @@
       font-family:'Poppins',sans-serif;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
-      background:#ffffff;
-      color:#333;
-      line-height:1.6;
+      background:radial-gradient(circle at top left, #f4fcff 0%, #e9f8ff 35%, #fbf8ff 100%);
+      color:#1e2a3a;
+      line-height:1.7;
+      min-height:100vh;
     }
 
     /* HEADER */
 
     header{
-      background:linear-gradient(135deg,#0f2027,#2c5364);
+      background:linear-gradient(135deg,#0b697f,#009a92,#34c3b1);
       color:white;
       text-align:center;
       padding:80px 20px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    header::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at top right, rgba(255,255,255,0.35), transparent 36%);
+      pointer-events:none;
     }
 
     .logo{
-      width:120px;
-      margin-bottom:20px;
+      width:130px;
+      margin-bottom:25px;
     }
 
     header h1{
-      font-size:48px;
-      margin-bottom:10px;
+      font-size:56px;
+      margin-bottom:12px;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      text-shadow:0 12px 30px rgba(0,0,0,0.18);
     }
 
     header p{
-      font-size:18px;
-      opacity:0.9;
+      font-size:20px;
+      opacity:0.95;
+      max-width:680px;
+      margin:auto;
+      text-shadow:0 4px 16px rgba(0,0,0,0.12);
     }
 
     /* BUTTON */
 
     .btn{
       display:inline-block;
-      margin-top:20px;
-      padding:12px 25px;
-      background:#00c9a7;
+      margin-top:22px;
+      padding:14px 30px;
+      background:linear-gradient(135deg,#ff8d5b,#ffb96c);
       color:white;
       text-decoration:none;
-      border-radius:30px;
-      transition:0.3s;
+      border-radius:999px;
+      box-shadow:0 18px 30px rgba(255,137,88,0.25);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
     }
 
     .btn:hover{
-      background:#00a68c;
+      transform:translateY(-3px);
+      box-shadow:0 24px 40px rgba(255,137,88,0.28);
     }
 
     /* SECTION */
@@ -60,10 +85,16 @@
       padding:60px 20px;
     }
 
+    section:nth-of-type(even){
+      background:rgba(0,201,167,0.06);
+      border-radius:40px;
+    }
+
     h2{
       text-align:center;
       margin-bottom:40px;
-      color:#2c5364;
+      color:#0f4357;
+      letter-spacing:0.05em;
     }
 
     /* SERVICES */
@@ -75,21 +106,27 @@
     }
 
     .card{
-      background:white;
-      padding:25px;
-      border-radius:20px;
+      background:linear-gradient(180deg, #ffffff 0%, #effbff 100%);
+      padding:28px;
+      border-radius:28px;
       text-align:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-      transition:0.3s;
+      box-shadow:0 16px 40px rgba(20,92,119,0.08);
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      border:1px solid rgba(29,113,130,0.1);
     }
 
     .card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
+      box-shadow:0 24px 48px rgba(20,92,119,0.14);
     }
 
     .card h3{
-      margin-bottom:10px;
-      color:#00a68c;
+      margin-bottom:12px;
+      color:#0b5569;
+    }
+
+    .card p{
+      color:#3b5564;
     }
 
     /* BENEFITS */
@@ -102,9 +139,12 @@
 
     .benefit{
       flex:1 1 300px;
-      background:#e8f8f5;
-      padding:20px;
-      border-radius:12px;
+      background:linear-gradient(135deg, #e7fffa, #f7fbff);
+      padding:24px;
+      border-radius:18px;
+      border-left:5px solid #00c7a6;
+      color:#103841;
+      box-shadow:0 12px 25px rgba(8,76,83,0.06);
     }
 
     /* FEEDBACK */
@@ -116,21 +156,23 @@
     .feedback-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:15px;
+      gap:18px;
       margin-top:30px;
     }
 
     .feedback-card{
-      background:white;
-      border-radius:20px;
+      background:linear-gradient(180deg, #f7faff 0%, #e4fcff 100%);
+      border-radius:24px;
       overflow:hidden;
-      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      box-shadow:0 12px 30px rgba(1,95,119,0.12);
       cursor:pointer;
-      transition:0.3s;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      border:1px solid rgba(0,183,160,0.12);
     }
 
     .feedback-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(1,95,119,0.18);
     }
 
     .feedback-card img{
@@ -175,41 +217,40 @@
     }
 
     .contact-fixed a{
-      width:50px;
-      height:50px;
+      width:52px;
+      height:52px;
       border-radius:50%;
       color:white;
       display:flex;
       align-items:center;
       justify-content:center;
       text-decoration:none;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-      transition:0.3s;
+      box-shadow:0 12px 28px rgba(0,0,0,0.18);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .contact-fixed a:hover{
       transform:scale(1.1);
+      box-shadow:0 18px 34px rgba(0,0,0,0.22);
     }
 
     .zalo{
-      background:#008fe5;
+      background:linear-gradient(135deg,#00a8ff,#0066cc);
     }
 
     .fb{
-      background:#1877f2;
+      background:linear-gradient(135deg,#4267b2,#2a4aa0);
     }
 
     .phone{
-      background:#00c853;
+      background:linear-gradient(135deg,#00c853,#00b27a);
     }
 
-    /* FOOTER */
-
     footer{
-      background:#2c5364;
+      background:linear-gradient(135deg,#0d5d72,#175c8f);
       color:white;
       text-align:center;
-      padding:30px 20px;
+      padding:40px 20px;
     }
 
     footer p{
@@ -218,7 +259,12 @@
 
     footer i{
       margin-right:8px;
-      color:#00c9a7;
+      color:#ffbc6b;
+    }
+
+    footer a{
+      color:white;
+      text-decoration:none;
     }
 
     /* MOBILE */
@@ -249,66 +295,90 @@
     transform:translateY(0);
     }
     .booking{
-  padding:100px 20px;
+  padding:60px 20px;
   text-align:center;
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:30px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
+  max-width:980px;
+  margin:50px auto;
 }
 
 .booking h2{
-  font-size:48px;
-  margin-bottom:40px;
-  color:#1f4b63;
+  font-size:46px;
+  margin-bottom:35px;
+  color:#0c3a51;
+  letter-spacing:0.18em;
+  font-weight:800;
+  text-transform:uppercase;
+  position:relative;
+}
+
+.booking h2::after{
+  content:'';
+  display:block;
+  width:90px;
+  height:4px;
+  margin:16px auto 0;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00c9a7,#00f7b8);
 }
 
 .booking form{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
 }
 
 .booking input,
 .booking select{
-
-  padding:14px 18px;
-
-  border:none;
-
-  border-radius:12px;
-
+  width:100%;
+  padding:16px 18px;
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:14px;
   font-size:16px;
+  background:#f8fcfd;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  outline:none;
+  transition:0.25s ease;
+}
 
-  min-width:180px;
-
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
-
+.booking input:focus,
+.booking select:focus{
+  border-color:#00c9a7;
+  box-shadow:0 0 0 4px rgba(0,201,167,0.12);
 }
 
 .booking button{
-
-  padding:14px 28px;
-
+  grid-column:1/-1;
+  width:100%;
+  padding:16px 24px;
   border:none;
-
   border-radius:30px;
-
-  background:#00c9a7;
-
+  background:linear-gradient(135deg,#09b597,#2afbda);
   color:white;
-
   font-size:16px;
-
-  font-weight:bold;
-
+  font-weight:700;
   cursor:pointer;
-
-  transition:0.3s;
-
+  transition:transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+  background-size:200% 100%;
+  background-position:left;
+  box-shadow:0 14px 34px rgba(9,181,151,0.24);
+.booking button:hover{
+  transform:translateY(-3px);
+  opacity:0.98;
+  background-position:right;
+  box-shadow:0 18px 35px rgba(0,201,167,0.28);
 }
 
-.booking button:hover{
+.booking button.pulse{
+  animation:pulse-button 1.2s ease-in-out;
+}
 
-  transform:translateY(-3px);
-
-  opacity:0.9;
-
+@keyframes pulse-button{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.03);}
 }

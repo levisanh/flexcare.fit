@@ -14,6 +14,26 @@
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
+
+    const bookingButton = document.querySelector(".booking button");
+
+    if(bookingButton){
+      bookingButton.addEventListener("mouseover", () => {
+        bookingButton.textContent = "Nhanh tay đặt ngay!";
+        bookingButton.classList.add("pulse");
+      });
+
+      bookingButton.addEventListener("mouseout", () => {
+        bookingButton.textContent = "Đặt lịch ngay";
+        bookingButton.classList.remove("pulse");
+      });
+
+      setInterval(() => {
+        bookingButton.classList.add("pulse");
+        setTimeout(() => bookingButton.classList.remove("pulse"), 1200);
+      }, 7000);
+    }
+
     const fades = document.querySelectorAll(".fade-in");
 
 window.addEventListener("scroll", ()=>{
