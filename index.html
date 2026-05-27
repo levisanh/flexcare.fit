@@ -1,273 +1,203 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và phục hồi cơ thể chuyên sâu tại TP.HCM. Đặt lịch nhanh."
+    />
+    <title>Flexcare Therapy | Trị liệu giãn cơ tại HCM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description"
-    content="Flexcare Therapy chuyên trị liệu giãn cơ, stretching therapy và phục hồi cơ thể chuyên sâu tại TP.HCM. Đặt lịch nhanh.">
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Flexcare Therapy | Trị liệu giãn cơ tại HCM</title>
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="IMG_1535.png?v=2" />
+    <link rel="apple-touch-icon" href="IMG_1535.png?v=2" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <body>
+    <!-- HEADER -->
+    <header>
+      <img src="assets/images/logo.png" alt="Flexcare Logo" class="logo" />
+      <h1>Flexcare Therapy</h1>
+      <p>Stretching Therapy &amp; phục hồi cơ thể chuyên sâu tại TP.HCM</p>
+    </header>
 
-  <!-- Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- SERVICES -->
+    <section id="booking" class="booking fade-in">
+      <h2>Đặt lịch</h2>
+      <form id="booking-form">
+        <input type="text" id="name" placeholder="Họ tên" required />
+        <input type="tel" id="phone" placeholder="Số điện thoại" required />
+        <input type="date" id="date" required />
+        <select id="time" required>
+          <option value="" disabled selected>Chọn khung giờ</option>
+          <option>07:00</option>
+          <option>08:00</option>
+          <option>09:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+          <option>20:00</option>
+          <option>21:00</option>
+          <option>22:00</option>
+        </select>
+        <textarea id="note" placeholder="Ghi chú yêu cầu của bạn (tùy chọn)"></textarea>
+        <select id="service">
+          <option>Stretching Therapy</option>
+          <option>Recovery Therapy</option>
+          <option>Massage trị liệu</option>
+        </select>
+        <button type="submit">Đặt lịch ngay</button>
+      </form>
+    </section>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="IMG_1535.png?v=2">
-  <link rel="apple-touch-icon" href="IMG_1535.png?v=2">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-   
-  <!-- HEADER -->
-
-  <header>
-
-    <img src="assets/images/logo.png" alt="Flexcare Logo" class="logo">
-
-    <h1>Flexcare Therapy</h1>
-
-    <p>
-      Stretching Therapy & phục hồi cơ thể chuyên sâu tại TP.HCM
-    </p>
-
-  </header>
-
-  <!-- SERVICES -->
-   
-  <section id="booking" class="booking fade-in">
-
-  <h2>Đặt lịch</h2>
-
-  <form id="booking-form">
-
-    <input
-      type="text"
-      id="name"
-      placeholder="Họ tên"
-      required
-    >
-
-    <input
-      type="tel"
-      id="phone"
-      placeholder="Số điện thoại"
-      required
-    >
-
-    <input
-      type="date"
-      id="date"
-      required
-    >
-
-    <input
-      type="time"
-      id="time"
-      required
-    >
-
-    <select id="service">
-
-      <option>
-        Stretching Therapy
-      </option>
-
-      <option>
-        Recovery Therapy
-      </option>
-
-      <option>
-        Massage trị liệu
-      </option>
-
-    </select>
-
-    <button type="submit">
-      Đặt lịch ngay
-    </button>
-
-  </form>
-
-</section>
-  <section>
-
-    <h2>Dịch vụ của chúng tôi</h2>
-
-    <div class="services">
-
-      <div class="card">
-        <h3>Trị liệu phục hồi cơ thể</h3>
-        <p>
-          Hỗ trợ giảm đau cơ, căng cứng và cải thiện khả năng vận động bằng phương pháp trị liệu chuyên sâu.
-        </p>
+    <section>
+      <h2>Dịch vụ của chúng tôi</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Trị liệu phục hồi cơ thể</h3>
+          <p>
+            Hỗ trợ giảm đau cơ, căng cứng và cải thiện khả năng vận động bằng phương pháp trị
+            liệu chuyên sâu.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Massage trị liệu</h3>
+          <p>Thư giãn cơ bắp và cải thiện tuần hoàn máu.</p>
+        </div>
+        <div class="card">
+          <h3>Recovery Therapy</h3>
+          <p>Hỗ trợ phục hồi sau tập luyện hoặc chấn thương.</p>
+        </div>
+        <div class="card">
+          <h3>Body Therapy</h3>
+          <p>
+            Liệu trình trị liệu giúp giải phóng áp lực cơ bắp và tăng tuần hoàn.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Massage trị liệu</h3>
-        <p>
-          Thư giãn cơ bắp và cải thiện tuần hoàn máu.
-        </p>
+    <!-- BENEFITS -->
+    <section>
+      <h2>Lợi ích khi đến Flexcare</h2>
+      <div class="benefits">
+        <div class="benefit">✔ Giảm đau lưng, cổ, vai gáy</div>
+        <div class="benefit">✔ Tăng độ linh hoạt cơ thể</div>
+        <div class="benefit">✔ Cải thiện hiệu suất tập luyện</div>
+        <div class="benefit">✔ Thư giãn tinh thần</div>
+        <div class="benefit">✔ Hồi phục vận động</div>
+        <div class="benefit">✔ Không thuốc - không xâm lấn</div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Recovery Therapy</h3>
-        <p>
-          Hỗ trợ phục hồi sau tập luyện hoặc chấn thương.
-        </p>
+    <!-- FEEDBACK -->
+    <section class="feedback-section fade-in">
+      <h2>Trải nghiệm của khách hàng</h2>
+      <div class="feedback-grid">
+        <div class="feedback-card">
+          <img
+            src="assets/images/feedback1.jpg"
+            alt="Feedback 1"
+            onclick="openPopup(this.src)"
+          />
+        </div>
+        <div class="feedback-card">
+          <img
+            src="assets/images/feedback2.jpg"
+            alt="Feedback 2"
+            onclick="openPopup(this.src)"
+          />
+        </div>
+        <div class="feedback-card">
+          <img
+            src="assets/images/feedback3.jpg"
+            alt="Feedback 3"
+            onclick="openPopup(this.src)"
+          />
+        </div>
+        <div class="feedback-card">
+          <img
+            src="assets/images/feedback4.jpg"
+            alt="Feedback 4"
+            onclick="openPopup(this.src)"
+          />
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Body Therapy</h3>
-        <p>
-          Liệu trình trị liệu giúp giải phóng áp lực cơ bắp và tăng tuần hoàn.
-        </p>
-      </div>
-
+    <!-- POPUP -->
+    <div id="popup" class="popup" onclick="closePopup()">
+      <img id="popup-img" />
     </div>
 
-  </section>
+    <!-- CTA -->
+    <section style="text-align:center;">
+      <h2>Sẵn sàng trải nghiệm?</h2>
+      <a href="#booking" class="btn">Liên hệ đặt lịch ngay</a>
+    </section>
 
-  <!-- BENEFITS -->
-
-  <section>
-
-    <h2>Lợi ích khi đến Flexcare</h2>
-
-    <div class="benefits">
-
-      <div class="benefit">✔ Giảm đau lưng, cổ, vai gáy</div>
-
-      <div class="benefit">✔ Tăng độ linh hoạt cơ thể</div>
-
-      <div class="benefit">✔ Cải thiện hiệu suất tập luyện</div>
-
-      <div class="benefit">✔ Thư giãn tinh thần</div>
-
-      <div class="benefit">✔ Hồi phục vận động</div>
-
-      <div class="benefit">✔ Không thuốc - không xâm lấn</div>
-
-    </div>
-
-  </section>
-
-  <!-- FEEDBACK -->
-
- <section class="feedback-section fade-in">
-
-    <h2>Trải nghiệm của khách hàng</h2>
-
-    <div class="feedback-grid">
-
-      <div class="feedback-card">
-    <img src="assets/images/feedback1.jpg"
-         alt="Feedback 1"
-         onclick="openPopup(this.src)">
-</div>
-
-<div class="feedback-card">
-    <img src="assets/images/feedback2.jpg"
-         alt="Feedback 2"
-         onclick="openPopup(this.src)">
-</div>
-
-<div class="feedback-card">
-    <img src="assets/images/feedback3.jpg"
-         alt="Feedback 3"
-         onclick="openPopup(this.src)">
-</div>
-
-<div class="feedback-card">
-    <img src="assets/images/feedback4.jpg"
-         alt="Feedback 4"
-         onclick="openPopup(this.src)">
-</div>
-
-    </div>
-
-  </section>
-
-  <!-- CTA -->
-
-  <section style="text-align:center;">
-
-    <h2>Sẵn sàng trải nghiệm?</h2>
-
-    <a href="#booking" class="btn">
-      Liên hệ đặt lịch ngay
-    </a>
-
-  </section>
-
-  <!-- FLOAT CONTACT -->
-
-  <div class="contact-fixed">
-
-    <a href="https://zalo.me/0399965500"
-       target="_blank"
-       class="zalo">
-      <i class="fa-solid fa-comment"></i>
-    </a>
-
-    <a href="https://www.facebook.com/share/1LUgZKGjwU/?mibextid=wwXIfr"
-       target="_blank"
-       class="fb">
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
-
-    <a href="tel:0399965500"
-       class="phone">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-
-  </div>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p><strong>Flexcare Therapy</strong></p>
-
-    <p>
-      <i class="fa-solid fa-location-dot"></i>
-      521/37 Cách Mạng Tháng 8, P13, Q10, Ho Chi Minh City, Vietnam
-    </p>
-
-    <p>
-      <i class="fa-solid fa-phone"></i>
-
-      <a href="tel:0399965500"
-         style="color:white;text-decoration:none;">
-        039 996 5500
+    <!-- FLOAT CONTACT -->
+    <div class="contact-fixed">
+      <a href="https://zalo.me/0399965500" target="_blank" class="zalo">
+        <i class="fa-solid fa-comment"></i>
       </a>
-    </p>
-
-    <p>
-      <i class="fa-solid fa-envelope"></i>
-
-      <a href="mailto:flexcare01@gmail.com"
-         style="color:white;text-decoration:none;">
-        flexcare01@gmail.com
+      <a
+        href="https://www.facebook.com/share/1LUgZKGjwU/?mibextid=wwXIfr"
+        target="_blank"
+        class="fb"
+      >
+        <i class="fa-brands fa-facebook-f"></i>
       </a>
-    </p>
+      <a href="tel:0399965500" class="phone">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
 
-    <br>
+    <!-- FOOTER -->
+    <footer>
+      <p><strong>Flexcare Therapy</strong></p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        521/37 Cách Mạng Tháng 8, P13, Q10, Ho Chi Minh City, Vietnam
+      </p>
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:0399965500" style="color:white; text-decoration:none;">
+          039 996 5500
+        </a>
+      </p>
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:flexcare01@gmail.com" style="color:white; text-decoration:none;">
+          flexcare01@gmail.com
+        </a>
+      </p>
+      <br />
+      <p>© <span id="year"></span> Flexcare Therapy | All rights reserved</p>
+    </footer>
 
-    <p>
-      © <span id="year"></span> Flexcare Therapy | All rights reserved
-    </p>
-
-  </footer>
-
-  <!-- SCRIPT -->
-
-  <script src="script.js"></script>
-
-</body>
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+  </body>
 </html>
