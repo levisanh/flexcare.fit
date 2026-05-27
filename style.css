@@ -323,9 +323,34 @@ footer a {
   transition: 0.25s ease;
 }
 
+.booking input,
+.booking select,
+.booking textarea {
+  position: relative;
+}
+
 .booking textarea {
   min-height: 120px;
   resize: vertical;
+}
+
+.booking input[type="date"],
+.booking input[type="time"] {
+  cursor: pointer;
+}
+
+.booking input[type="date"] {
+  color: transparent;
+  text-shadow: 0 0 0 #1e2a3a;
+}
+
+.booking input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(12, 58, 81, 0.75);
+  opacity: 0.9;
 }
 
 .booking input:focus,
