@@ -209,30 +209,98 @@ h2 {
 
 .contact-fixed {
   position: fixed;
-  bottom: 20px;
-  right: 15px;
+  bottom: 14px;
+  right: 8px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
-  z-index: 999;
+  z-index: 9999;
+  padding: 0 4px 4px 0;
 }
 
 .contact-fixed a {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-fixed a:hover {
-  transform: scale(1.1);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+  transform: scale(1.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
+}
+
+/* Contact prompt pill */
+.contact-prompt {
+  background: linear-gradient(135deg, #00c9a7 0%, #00a3ff 100%);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 28px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 16px 36px rgba(0, 70, 110, 0.18);
+  max-width: 240px;
+  text-align: left;
+  line-height: 1.35;
+  position: relative;
+  overflow: visible;
+  animation: slideIn 420ms cubic-bezier(.2,.9,.2,1) both;
+  white-space: normal;
+}
+
+.contact-prompt::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  position: absolute;
+  right: 18px;
+  bottom: -6px;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-prompt:hover {
+  transform: translateX(-5px);
+}
+
+@media (max-width: 700px) {
+  .contact-fixed {
+    bottom: 12px;
+    right: 6px;
+    gap: 8px;
+  }
+
+  .contact-fixed a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-prompt {
+    max-width: 200px;
+    font-size: 12px;
+    padding: 10px 14px;
+    line-height: 1.4;
+    box-shadow: 0 14px 30px rgba(0, 70, 110, 0.18);
+  }
+
+  .contact-prompt::after {
+    right: 16px;
+    bottom: -6px;
+  }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(18px) scale(.98); opacity: 0 }
+  to   { transform: translateX(0) scale(1); opacity: 1 }
 }
 
 .zalo {
@@ -260,6 +328,44 @@ footer p {
 
 footer i {
   margin-right: 8px;
+
+footer .map-link {
+  margin-top: 8px;
+}
+
+footer .map-link i {
+  margin-right: 8px;
+  color: #fff;
+}
+
+footer .map-link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.map-embed-wrap {
+  margin-top: 12px;
+  max-width: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(2,8,23,0.25);
+}
+
+.map-embed {
+  width: 100%;
+  height: 180px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .map-embed {
+    height: 160px;
+  }
+  .map-embed-wrap {
+    max-width: 100%;
+  }
+}
   color: #ffbc6b;
 }
 
