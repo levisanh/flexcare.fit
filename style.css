@@ -797,8 +797,9 @@ footer .map-link a {
   }
 
   header {
-    background: linear-gradient(135deg, rgba(11, 105, 127, 0.95), rgba(52, 195, 177, 0.85));
-    background-image: none;
+    background: linear-gradient(135deg, rgba(11, 105, 127, 0.70), rgba(52, 195, 177, 0.60)), url('assets/images/thumnail1.jpg') center/cover no-repeat;
+    background-attachment: scroll;
+    background-blend-mode: overlay;
   }
 
   .card,
@@ -874,4 +875,59 @@ footer .map-link a {
   .contact-prompt {
     display: none;
   }
+}
+
+/* Small phones: fix nav overlapping header and tighten hero */
+@media (max-width: 480px) {
+  .site-nav {
+    position: relative; /* disable sticky */
+    top: auto;
+    padding: 8px 10px;
+    gap: 10px;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 6px 18px rgba(2,8,23,0.06);
+  }
+
+  .site-nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  header {
+    padding: 36px 14px;
+    background: linear-gradient(135deg, rgba(11, 105, 127, 0.80), rgba(52, 195, 177, 0.70)), url('assets/images/thumnail1.jpg') center/cover no-repeat;
+    background-attachment: scroll;
+    background-blend-mode: overlay;
+    text-align: center;
+  }
+
+  .logo {
+    width: 88px;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    font-size: 13px;
+    max-width: 320px;
+    margin: 0 auto 8px;
+    opacity: 0.95;
+  }
+
+  /* Make sure main content isn't hidden under nav */
+  main { padding-top: 0; }
+
+  .booking { margin-top: 12px; }
+
+  /* make CTA and buttons full width for easier tapping */
+  .btn, .booking button { width: 100%; }
+
+  /* Reduce spacing for compactness */
+  section { padding: 24px 14px; }
 }
