@@ -889,14 +889,6 @@ footer .map-link a {
   .map-embed-wrap {
     max-width: 100%;
   }
-
-  .contact-fixed {
-    display: none;
-  }
-
-  .contact-prompt {
-    display: none;
-  }
 }
 
 /* Small phones: fix nav overlapping header and tighten hero */
