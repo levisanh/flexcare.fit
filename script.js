@@ -43,30 +43,33 @@ window.addEventListener('scroll', () => {
 const scriptURL =
   'https://script.google.com/macros/s/AKfycbyZJA2cUBeGop0wy1pgu0nJhlK5AtNpFRk6wkkP0rVVbZHwaKlDgijQxkhpKF-QoWo/exec';
 
-document.getElementById('booking-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+const bookingForm = document.getElementById('booking-form');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  const data = {
-    name: document.getElementById('name').value,
-    phone: document.getElementById('phone').value,
-    date: document.getElementById('date').value,
-    time: document.getElementById('time').value,
-    service: document.getElementById('service').value,
-    note: document.getElementById('note').value,
-  };
+    const data = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      date: document.getElementById('date').value,
+      time: document.getElementById('time').value,
+      service: document.getElementById('service').value,
+      note: document.getElementById('note').value,
+    };
 
-  await fetch(scriptURL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
+    await fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    alert('Đặt lịch thành công 😄');
+    bookingForm.reset();
   });
-
-  alert('Đặt lịch thành công 😄');
-  document.getElementById('booking-form').reset();
-});
+}
 
 // Manage external placeholder for date input
 (function () {
