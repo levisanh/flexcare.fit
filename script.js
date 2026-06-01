@@ -54,7 +54,7 @@ if (bookingForm) {
       date: document.getElementById('date').value,
       time: document.getElementById('time').value,
       service: document.getElementById('service').value,
-      note: document.getElementById('note').value,
+      note: document.getElementById('note')?.value || '',
     };
 
     await fetch(scriptURL, {
