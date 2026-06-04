@@ -88,3 +88,32 @@ if (bookingForm) {
   // init
   update();
 })();
+
+// Dynamic service description for booking form
+(function () {
+  const serviceSelect = document.getElementById('service');
+  const descEl = document.getElementById('service-description');
+  if (!serviceSelect || !descEl) return;
+
+  const descriptions = {
+    'Giản Cơ Trị Liệu (Thân Trên)':
+      'Tập trung giãn cơ vùng cổ, vai và lưng trên — giảm đau cổ-vai-gáy, cải thiện tư thế và tăng lưu thông máu vùng trên cơ thể.',
+    'Giản Cơ Trị Liệu (Thân Dưới)':
+      'Giãn cơ mông, hông, đùi và lưng dưới — hỗ trợ giảm đau lưng do ngồi lâu, căng cơ sau vận động và cải thiện linh hoạt.',
+    'Giản Cơ Trị Liệu (Toàn Thân)':
+      'Liệu trình toàn thân kết hợp kỹ thuật giãn cơ cho các nhóm cơ chính, phù hợp khi bạn cần phục hồi tổng thể và cân bằng lại cơ thể.',
+    'Trị Liệu Phục Hồi':
+      'Phục hồi chức năng, giảm viêm và giảm nguy cơ chấn thương — bao gồm đánh giá triệu chứng và lộ trình điều trị cá nhân hóa.'
+  };
+
+  function update() {
+    const key = serviceSelect.value || '';
+    const text = descriptions[key] || '';
+    descEl.textContent = text;
+    descEl.style.display = text ? 'block' : 'none';
+  }
+
+  serviceSelect.addEventListener('change', update);
+  // init on load in case a value is preselected
+  update();
+})();
